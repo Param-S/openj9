@@ -40,6 +40,7 @@ ifeq (zos_390-64_cmprssptrs, $(SPEC))
 		--enable-OMR_ENV_DATA64 \
 		--enable-OMR_GC_COMPRESSED_POINTERS \
 		--enable-OMR_GC_CONCURRENT_SCAVENGER \
+		--enable-OMR_GC_IDLE_HEAP_MANAGER \
 		--enable-OMR_INTERP_COMPRESSED_OBJECT_HEADER \
 		--enable-OMR_INTERP_SMALL_MONITOR_SLOT \
 		--enable-OMR_PORT_CAN_RESERVE_SPECIFIC_ADDRESS
@@ -62,6 +63,7 @@ ifeq (zos_390-64, $(SPEC))
 		--enable-OMR_ARCH_S390 \
 		--enable-OMR_ENV_DATA64 \
 		--enable-OMR_GC_CONCURRENT_SCAVENGER \
+		--enable-OMR_GC_IDLE_HEAP_MANAGER \
 		--enable-OMR_PORT_CAN_RESERVE_SPECIFIC_ADDRESS
 endif
 

@@ -1943,7 +1943,7 @@ IDATA VMInitStages(J9JavaVM *vm, IDATA stage, void* reserved) {
 			 */
 			if (J9_ARE_ANY_BITS_SET(vm->vmRuntimeStateListener.idleTuningFlags, J9_IDLE_TUNING_GC_ON_IDLE | J9_IDLE_TUNING_COMPACT_ON_IDLE)) {
 				BOOLEAN idleGCTuningSupported = FALSE;
-#if defined(LINUX) && (defined(J9HAMMER) || defined(J9X86))
+#if defined(J9ZOS390) || (defined(LINUX) && (defined(J9HAMMER) || defined(J9X86)))
 				/* & only for gencon GC policy */
 				if (J9_GC_POLICY_GENCON == ((OMR_VM *)vm->omrVM)->gcPolicy) {
 					idleGCTuningSupported = TRUE;
